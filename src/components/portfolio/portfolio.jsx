@@ -6,7 +6,10 @@ import IMG3 from "./../../assets/portfolio3.jpg";
 import IMG4 from "./../../assets/portfolio4.jpg";
 import IMG5 from "./../../assets/portfolio5.jpg";
 import IMG6 from "./../../assets/portfolio6.jpg";
-
+import moreprojects from "./../../assets/moreprojects.jpg";
+import {
+  Link
+} from "react-router-dom";
 
 const data = [
   {
@@ -20,7 +23,7 @@ const data = [
     id: 2,
     image: IMG2,
     title: "RECIPE SEARCH APP USING REACT LIBRARY",
-    github: "https://github.com/NadeemGulam/Recipe-App-With-React",
+    github: "https://github.com/NadeemGulam/Recipe-App-With-React", 
     demo: "https://boisterous-capybara-4ee6f8.netlify.app/",
   },
   {
@@ -50,9 +53,18 @@ const data = [
     title: "Parking slot Detection using Arduino",
     github: "https://github.com/NadeemGulam/Parking-slot-detection-using-Arduino",
     demo: "https://google.com",
-  },
+   }
+  ,
   {
-    id: 6,
+    id: 7,
+    image: IMG6,
+    title: "Parking slot Detection using Arduino",
+    github: "https://github.com/NadeemGulam/Parking-slot-detection-using-Arduino",
+    demo: "https://google.com",
+  }
+  ,
+  {
+    id: 8,
     image: IMG6,
     title: "Parking slot Detection using Arduino",
     github: "https://github.com/NadeemGulam/Parking-slot-detection-using-Arduino",
@@ -62,6 +74,7 @@ const data = [
 
 const portfolio = () => {
   return (
+    <>
     <section id="portfolio">
       <h5>My Recent Works</h5>
       <h2>portfolio</h2>
@@ -84,8 +97,20 @@ const portfolio = () => {
             </article>
           );
         })}
-      </div>
-    </section>
+     
+         {/* Static card for moreProjects */}
+         <article className="portfolio__item">
+              <div className="portfolio__item-image">
+                <img src={moreprojects} alt={"MoreProjects"} className="project-image"/>
+              </div>
+              <h3>Click here to see more projects</h3>
+              <div className="portfolio__item-cta"> 
+                <Link to='/Portfolio-2.0/more-projects' className="btn" >More Projects</Link>
+              </div>
+            </article>
+            </div>
+      </section>
+    </>
   );
 };
 
