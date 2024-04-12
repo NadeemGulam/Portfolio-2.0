@@ -50,9 +50,26 @@ const data = [
     title: "Parking slot Detection using Arduino",
     github: "https://github.com/NadeemGulam/Parking-slot-detection-using-Arduino",
     demo: "https://google.com",
-  },
+  }
+  ,
   {
-    id: 6,
+    id: 7,
+    image: IMG6,
+    title: "Parking slot Detection using Arduino",
+    github: "https://github.com/NadeemGulam/Parking-slot-detection-using-Arduino",
+    demo: "https://google.com",
+  }
+  ,
+  {
+    id: 8,
+    image: IMG6,
+    title: "Parking slot Detection using Arduino",
+    github: "https://github.com/NadeemGulam/Parking-slot-detection-using-Arduino",
+    demo: "https://google.com",
+  }
+  ,
+  {
+    id: 9,
     image: IMG6,
     title: "Parking slot Detection using Arduino",
     github: "https://github.com/NadeemGulam/Parking-slot-detection-using-Arduino",
