@@ -63,40 +63,35 @@ const data = [
     id: 7,
     image: IMG7,
     title: "TinDog",
-    github:
-      "https://github.com/NadeemGulam/TinDog",
+    github: "https://github.com/NadeemGulam/TinDog",
     demo: "https://nadeemgulam.github.io/TinDog/",
   },
   {
     id: 8,
     image: IMG8,
     title: "Expense Tracker",
-    github:
-      "https://github.com/NadeemGulam/Expense_tracker",
+    github: "https://github.com/NadeemGulam/Expense_tracker",
     demo: "https://nadeem-expense-tracking.netlify.app",
   },
   {
     id: 9,
     image: IMG9,
     title: "Snap Sign",
-    github:
-      "https://github.com/NadeemGulam/Snap-Sign",
+    github: "https://github.com/NadeemGulam/Snap-Sign",
     demo: "https://snap-sign.netlify.app",
   },
   {
     id: 10,
     image: IMG10,
     title: "Library Book Seach Application",
-    github:
-      "https://github.com/NadeemGulam/frontend-internship-assignment",
+    github: "https://github.com/NadeemGulam/frontend-internship-assignment",
     demo: "https://nadeem-gulam-fyle-intership.netlify.app",
   },
   {
     id: 11,
     image: IMG11,
     title: "Quiz Application",
-    github:
-      "https://github.com/NadeemGulam/Quiz-App",
+    github: "https://github.com/NadeemGulam/Quiz-App",
     demo: "https://quiz-app-nadeem-gulam.netlify.app",
   },
 ];
@@ -119,7 +114,12 @@ const portfolio = () => {
                   <a href={i.github} className="btn" target="-blank">
                     Github
                   </a>
-                  <a href={i.demo} className="btn btn-primary" target="_blank" rel="noreferrer">
+                  <a
+                    href={i.demo}
+                    className="btn btn-primary"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Live Demo
                   </a>
                 </div>
