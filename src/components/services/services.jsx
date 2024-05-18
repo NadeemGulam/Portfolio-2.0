@@ -16,7 +16,7 @@ const services = () => {
           <ul className='service__list'>
             <li ><BiCheck className='service__list-icon'/>
             <p>150+ {" "}
-                <a href="https://leetcode.com/nadeem10shagulam/" target="_blank">
+                <a href="https://leetcode.com/nadeem10shagulam/" target="_blank" rel="noreferrer">
                   Leetcode
                 </a>{" "}
                 problem solved

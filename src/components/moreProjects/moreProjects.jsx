@@ -77,7 +77,7 @@ const MoreProjects = () => {
                     <a href={i.github} className="btn" target="-blank">
                       Github
                     </a>
-                    <a href={i.demo} className="btn btn-primary" target="_blank">
+                    <a href={i.demo} className="btn btn-primary" target="_blank" rel="noreferrer">
                       Live Demo
                     </a>
                   </div>
