@@ -138,7 +138,7 @@ const portfolio = () => {
             </div>
             <h3>Click here to see more projects</h3>
             <div className="portfolio__item-cta">
-              <Link to="/Portfolio-2.0/more-projects" className="btn">
+              <Link to="/more-projects" className="btn">
                 More Projects
               </Link>
             </div>
