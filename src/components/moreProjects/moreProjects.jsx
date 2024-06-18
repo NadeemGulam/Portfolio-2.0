@@ -11,6 +11,7 @@ import IMG8 from "./../../assets/portfolio8.png";
 import IMG9 from "./../../assets/portfolio9.png";
 import IMG10 from "./../../assets/portfolio10.png";
 import IMG11 from "./../../assets/portfolio11.png";
+import IMG12 from "./../../assets/2.png";
 
 const data = [
   {
@@ -91,6 +92,13 @@ const data = [
     title: "Quiz Application",
     github: "https://github.com/NadeemGulam/Quiz-App",
     demo: "https://quiz-app-nadeem-gulam.netlify.app",
+  },
+  {
+    id: 12,
+    image: IMG12,
+    title: "Pulse Feed",
+    github: "https://github.com/NadeemGulam/x-xlone",
+    demo: "https://www.youtube.com/watch?v=VW2KkZ_YiyU",
   },
 ];
 

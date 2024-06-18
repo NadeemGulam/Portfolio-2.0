@@ -1,10 +1,10 @@
 import React from "react";
 import "./portfolio.css";
-import IMG1 from "./../../assets/portfolio1.jpg";
-import IMG2 from "./../../assets/portfolio2.jpg";
 import IMG3 from "./../../assets/portfolio3.jpg";
 import IMG4 from "./../../assets/portfolio4.jpg";
 import IMG5 from "./../../assets/portfolio5.jpg";
+import IMG12 from "./../../assets/2.png";
+import IMG9 from "./../../assets/portfolio9.png";
 
 import moreprojects from "./../../assets/moreprojects.jpg";
 import { Link } from "react-router-dom";
@@ -12,18 +12,17 @@ import { Link } from "react-router-dom";
 const data = [
   {
     id: 1,
-    image: IMG1,
-    title: "Accident Identification and Prevention System",
-    github:
-      "https://github.com/NadeemGulam/Implementation_of_IOT_based_accident_idemtification_and_prevention_system",
-    demo: "https://drive.google.com/file/d/17b_pP8I9hPOy50OPmknXHC8StlmRcrhU/view?usp=sharing,%20https://drive.google.com/file/d/1K0RZQMw6oZP1BLjH85bfJP08M50KEp9a/view?usp=sharing,%20https://drive.google.com/file/d/1ojeLkxNTDHKxkywwLjXsJaqQQ9P2O1OO/view?usp=sharing,%20https://drive.google.com/file/d/1xKB7ThiLx2DzeVw_umPfMFvVuGarcUM7/view?usp=sharing",
+    image: IMG12,
+    title: "Pulse Feed ( X ) ",
+    github: "https://github.com/NadeemGulam/x-xlone",
+    demo: "https://www.youtube.com/watch?v=VW2KkZ_YiyU",
   },
   {
     id: 2,
-    image: IMG2,
-    title: "Recipe search app using React library",
-    github: "https://github.com/NadeemGulam/Recipe-App-With-React",
-    demo: "https://boisterous-capybara-4ee6f8.netlify.app/",
+    image: IMG9,
+    title: "Snap Sign",
+    github: "https://github.com/NadeemGulam/Snap-Sign",
+    demo: "https://snap-sign.netlify.app",
   },
   {
     id: 3,
@@ -45,7 +44,7 @@ const data = [
     title: "React Based E-Commerce-Website",
     github: "https://github.com/NadeemGulam/React-Based-E-Commerce-Website",
     demo: "https://e-commerce-nadee-gulam.netlify.app/",
-  }
+  },
 ];
 
 const portfolio = () => {
@@ -59,7 +58,7 @@ const portfolio = () => {
             return (
               <article key={i.id} className="portfolio__item">
                 <div className="portfolio__item-image">
-                  <img src={i.image} alt={i.title} />
+                  <img className="portfolio-image" src={i.image} alt={i.title} />
                 </div>
                 <h3>{i.title}</h3>
                 <div className="portfolio__item-cta">
