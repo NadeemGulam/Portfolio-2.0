@@ -1,5 +1,5 @@
 /** @format */
-img {
+.portfolio-image {
   height: 200px;
 }
 
@@ -56,7 +56,7 @@ img {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  img{
+  .portfolio-image {
     height: 150px;
   }
 }

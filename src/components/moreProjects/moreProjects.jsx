@@ -112,7 +112,7 @@ const MoreProjects = () => {
           return (
             <article key={i.id} className="portfolio__item">
               <div className="portfolio__item-image">
-                <img src={i.image} alt={i.title} />
+                <img className="portfolio-image" src={i.image} alt={i.title} />
               </div>
               <h3>{i.title}</h3>
               <div className="portfolio__item-cta">
