@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import Header from "./../header/header.jsx";
 import Nav from "./../nav/nav.jsx";
 import About from "./../about/About.jsx";
@@ -12,17 +12,17 @@ import Footer from "./../footer/footer.jsx";
 const Home = () => {
   return (
     <div>
-      <Header/>
-<Nav/>
-<About/>
-<Experience/>
-<Services/>
-<Portfolio/>
-<Testimonial/>
-<Contact/>
-<Footer/>
+      <Header />
+      <Nav />
+      <About />
+      <Experience />
+      <Services />
+      <Portfolio />
+      <Testimonial />
+      <Contact />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

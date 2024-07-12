@@ -1,34 +1,28 @@
 import React from "react";
 import "./portfolio.css";
-import IMG1 from "./../../assets/portfolio1.jpg";
-import IMG2 from "./../../assets/portfolio2.jpg";
 import IMG3 from "./../../assets/portfolio3.jpg";
 import IMG4 from "./../../assets/portfolio4.jpg";
 import IMG5 from "./../../assets/portfolio5.jpg";
-import IMG6 from "./../../assets/portfolio6.jpg";
-import IMG7 from "./../../assets/portfolio7.png";
-import IMG8 from "./../../assets/portfolio8.png";
+import IMG12 from "./../../assets/2.png";
 import IMG9 from "./../../assets/portfolio9.png";
-import IMG10 from "./../../assets/portfolio10.png";
-import IMG11 from "./../../assets/portfolio11.png";
+
 import moreprojects from "./../../assets/moreprojects.jpg";
 import { Link } from "react-router-dom";
 
 const data = [
   {
     id: 1,
-    image: IMG1,
-    title: "Accident Identification and Prevention System",
-    github:
-      "https://github.com/NadeemGulam/Implementation_of_IOT_based_accident_idemtification_and_prevention_system",
-    demo: "https://drive.google.com/file/d/17b_pP8I9hPOy50OPmknXHC8StlmRcrhU/view?usp=sharing,%20https://drive.google.com/file/d/1K0RZQMw6oZP1BLjH85bfJP08M50KEp9a/view?usp=sharing,%20https://drive.google.com/file/d/1ojeLkxNTDHKxkywwLjXsJaqQQ9P2O1OO/view?usp=sharing,%20https://drive.google.com/file/d/1xKB7ThiLx2DzeVw_umPfMFvVuGarcUM7/view?usp=sharing",
+    image: IMG12,
+    title: "Pulse Feed ( X ) ",
+    github: "https://github.com/NadeemGulam/x-xlone",
+    demo: "https://www.youtube.com/watch?v=VW2KkZ_YiyU",
   },
   {
     id: 2,
-    image: IMG2,
-    title: "Recipe search app using React library",
-    github: "https://github.com/NadeemGulam/Recipe-App-With-React",
-    demo: "https://boisterous-capybara-4ee6f8.netlify.app/",
+    image: IMG9,
+    title: "Snap Sign",
+    github: "https://github.com/NadeemGulam/Snap-Sign",
+    demo: "https://snap-sign.netlify.app",
   },
   {
     id: 3,
@@ -51,49 +45,6 @@ const data = [
     github: "https://github.com/NadeemGulam/React-Based-E-Commerce-Website",
     demo: "https://e-commerce-nadee-gulam.netlify.app/",
   },
-  {
-    id: 6,
-    image: IMG6,
-    title: "Parking slot Detection using Arduino",
-    github:
-      "https://github.com/NadeemGulam/Parking-slot-detection-using-Arduino",
-    demo: "https://google.com",
-  },
-  {
-    id: 7,
-    image: IMG7,
-    title: "TinDog",
-    github: "https://github.com/NadeemGulam/TinDog",
-    demo: "https://nadeemgulam.github.io/TinDog/",
-  },
-  {
-    id: 8,
-    image: IMG8,
-    title: "Expense Tracker",
-    github: "https://github.com/NadeemGulam/Expense_tracker",
-    demo: "https://nadeem-expense-tracking.netlify.app",
-  },
-  {
-    id: 9,
-    image: IMG9,
-    title: "Snap Sign",
-    github: "https://github.com/NadeemGulam/Snap-Sign",
-    demo: "https://snap-sign.netlify.app",
-  },
-  {
-    id: 10,
-    image: IMG10,
-    title: "Library Book Seach Application",
-    github: "https://github.com/NadeemGulam/frontend-internship-assignment",
-    demo: "https://nadeem-gulam-fyle-intership.netlify.app",
-  },
-  {
-    id: 11,
-    image: IMG11,
-    title: "Quiz Application",
-    github: "https://github.com/NadeemGulam/Quiz-App",
-    demo: "https://quiz-app-nadeem-gulam.netlify.app",
-  },
 ];
 
 const portfolio = () => {
@@ -107,7 +58,7 @@ const portfolio = () => {
             return (
               <article key={i.id} className="portfolio__item">
                 <div className="portfolio__item-image">
-                  <img src={i.image} alt={i.title} />
+                  <img className="portfolio-image" src={i.image} alt={i.title} />
                 </div>
                 <h3>{i.title}</h3>
                 <div className="portfolio__item-cta">
