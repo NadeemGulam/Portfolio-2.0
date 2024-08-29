@@ -17,12 +17,21 @@ import "swiper/css/scrollbar";
 import AVTR0 from "../../assets/Avt1.jpeg";
 import AVTR1 from "../../assets/Avt2.jpeg";
 import AVTR2 from "../../assets/Avt3.jpeg";
+import AVTR4 from "../../assets/Avt4.jpeg";
 SwiperCore.use([]);
 
 
 const data = [
   {
     id: 0,
+    avatar: AVTR4,
+    clientName: "SAMEER SK",
+    history: "Lead Software Engineer at Fidelity Investments",
+    review:
+      "I had the pleasure of working closely with Nadeem, and I can confidently say he is one of the most dedicated and hardworking individuals I've encountered. As a junior member of the team, Nadeem consistently demonstrates an impressive ability to tackle challenges head-on, showing patience and perseverance in even the most demanding situations. What sets Nadeem apart is his commitment to personal growth. He is always pushing boundaries, eager to learn, and improve both personally and professionally. This drive, combined with a natural curiosity, makes him an invaluable asset to any team. His command over Front-end Frameworks and confidence in being able to tackle challenges with innovative solutions was very useful. Beyond technical skills and work ethic, he is incredibly endearing to all team members. He brings a positive attitude, collaborates effortlessly, and genuinely supports everyone around them, creating a strong sense of camaraderie within the group. I highly recommend Nadeem for any future endeavors. With his blend of hard work, patience, and team spirit, Nadeem will continue to thrive and make significant contributions wherever he goes.",
+  },
+  {
+    id: 1,
     avatar: AVTR0,
     clientName: "SURAJ KUMAR",
     history: "SMTS @Fyle worked together",
@@ -30,7 +39,7 @@ const data = [
       "I highly recommend Nadeem for any position. During his 3-month tenure at Fyle as a Frontend Developer, he demonstrated exceptional learning and leadership skills. Nadeem consistently met deadlines and performed commendably, even in challenging situations. His technical expertise and dedication will be valuable assets to any team. I strongly encourage you to consider Nadeem for any suitable opportunity without reservation.",
   },
   {
-    id: 1,
+    id: 2,
     avatar: AVTR1,
     clientName: "RITVIK KALA",
     history: "CS @Fyle worked together",
@@ -38,7 +47,7 @@ const data = [
       "I am delighted to recommend Nadeem, an intern in our Engineering team, who has been an outstanding asset to the team for the past months. As a highly skilled and efficient Web developer, he consistently impresses us with his ability to create seamless and user-friendly web applications. Beyond his technical expertise, Nadeem's friendly and easy-going nature fosters a positive work environment. He actively contributes to cross-team collaborations and remains receptive to feedback. Nadeem's attention to detail and proactive problem-solving has been invaluable, and he consistently meets deadlines without compromising quality. I have no doubt that Nadeem's talent and dedication will lead to a successful career. I wholeheartedly recommend him for any future opportunities.",
   },
   {
-    id: 2,
+    id: 3,
     avatar: AVTR2,
     clientName: "TUSHAR SAROCH",
     history: "Team Lead @Fyle worked together",
