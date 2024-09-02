@@ -4,19 +4,19 @@ import { BsPatchCheckFill } from "react-icons/bs";
 
 const skills = [
   { category: "Frontend Development", skills: [
-    { name: "HTML", level: "Experienced" },
-    { name: "Figma", level: "Intermediate" },
-    { name: "JavaScript", level: "Intermediate" },
-    { name: "Tailwind CSS", level: "Intermediate" },
     { name: "Angular", level: "Experienced" },
-    { name: "Next.js", level: "Intermediate" }
+    { name: "JavaScript", level: "Intermediate" },
+    { name: "HTML", level: "Experienced" },
+    { name: "CSS", level: "Intermediate" },
+    { name: "Figma", level: "Intermediate" },
+    { name: "React.js", level: "Intermediate" }
   ]},
   { category: "Backend Development", skills: [
-    { name: "Node.js", level: "Experienced" },
-    { name: "MongoDB", level: "Intermediate" },
-    { name: "C++", level: "Experienced" },
+    { name: "Java", level: "Intermediate" },
+    { name: "Spring Boot", level: "Intermediate" },
     { name: "AWS Cloud", level: "Intermediate" },
-    { name: "Java Spring", level: "Intermediate" },
+    { name: "C++", level: "Experienced" },
+    { name: "Node.js", level: "Intermediate" },
     { name: "Python", level: "Intermediate" }
   ]}
 ];
