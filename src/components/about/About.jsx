@@ -37,12 +37,15 @@ const About = () => {
             </article>
           </div>
           <p className="about__intro">
-            Hi, Nadeem here! I'm currently working at Fidelity Investments,
-            focusing on Angular and GraphQL development. With a solid background
-            in frontend development and software engineering, I've built robust
-            applications using the MERN stack, Next.js, and more. I'm passionate
-            about solving complex problems and continuously enhancing my skills.
-            I'm constantly excited to pick up new skills and take on challenges.
+            Hi, I'm Nadeem! 👋 I’ve recently joined ANZ as a Software Engineer,
+            working with ⚙️ Node.js, ☁️ AWS, 🌍 GCP, 🐳 Docker, Kubernetes, and
+            microservices to build mediation tools. Previously, I was at
+            Fidelity Investments, focusing on 🌐 Angular and GraphQL
+            development. With a strong foundation in both frontend and backend
+            technologies, I’ve built robust applications using the MERN stack,
+            Next.js, and more. I’m passionate about tackling complex problems,
+            🚀 expanding my skills, and embracing new challenges to grow as a
+            developer.{" "}
           </p>
 
           <a href="#contact" className="btn btn-primary">
