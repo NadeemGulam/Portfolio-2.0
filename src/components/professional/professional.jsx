@@ -19,7 +19,7 @@ const Professional = () => {
     let schoolIconStyles = { background: "#f9c74f" }
 
   return (
-    <section id="portfolio" className="prof">
+    <section id="proffessional" className="prof">
       <h5>What are my Professional</h5>
       <h2>Experiences</h2>
       <VerticalTimeline>
