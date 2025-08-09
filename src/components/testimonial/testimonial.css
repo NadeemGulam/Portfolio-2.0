@@ -4,6 +4,16 @@
     padding-bottom: 4rem;
 }
 
+.client__name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.client__name > a {
+  margin: 0 0 0 10px;
+}
+
 .client__avatar{
     width:4rem;
     aspect-ratio:1/1 ;
@@ -48,6 +58,10 @@
 .swiper-pagination-clickable .swiper-pagination-bullet {
     background: var(--color-primary);
   }
+
+.svg {
+
+}
 
  /**************Media query**********(medium devices)*****/
  @media screen and (max-width: 1024px){

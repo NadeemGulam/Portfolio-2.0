@@ -7,8 +7,10 @@ import Services from "./../services/services.jsx";
 import Professional from "./../professional/professional.jsx";
 import Portfolio from "./../portfolio/portfolio.jsx";
 import Testimonial from "./../testimonial/testimonial.jsx";
-import Contact from "./../Contact/Contact.jsx";
+// import Contact from "./../Contact/Contact.jsx";
 import Footer from "./../footer/footer.jsx";
+import { default as Contact } from "./../newContact/Contact.jsx";
+import StarsCanvas from "../canvas/Stars.jsx";
 
 const Home = () => {
   return (
@@ -21,7 +23,10 @@ const Home = () => {
       <Services />
       <Portfolio />
       <Testimonial />
-      <Contact />
+      <div className='relative z-0'>
+          <Contact />
+          <StarsCanvas />
+        </div>
       <Footer />
     </div>
   );
