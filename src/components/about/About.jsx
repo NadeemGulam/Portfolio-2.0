@@ -4,6 +4,7 @@ import ME from "../../assets/nadeem.jpg";
 import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
+import ComputersCanvas from '../canvas/Computers'
 const About = () => {
   return (
     <section id="about">
@@ -11,9 +12,10 @@ const About = () => {
       <h2>About Me</h2>
       <div className="container about__container">
         <div className="about__me">
-          <div className="about__me-image">
+            <ComputersCanvas />
+          {/* <div className="about__me-image">
             <img src={ME} alt="About me" />
-          </div>
+          </div> */}
         </div>
 
         <div className="about__content">
