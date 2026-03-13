@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { BsChatDotsFill } from "react-icons/bs";
 import { IoSend, IoClose } from "react-icons/io5";
 import { HiSparkles } from "react-icons/hi2";
+import { generateResponse, getSuggestions } from "./chatEngine";
 import "./ChatBot.css";
 
 const WELCOME_MESSAGE = {
@@ -17,6 +18,7 @@ const ChatBot = () => {
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
+  const [showSuggestions, setShowSuggestions] = useState(true);
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -52,10 +54,7 @@ const ChatBot = () => {
     });
   };
 
-  const handleSend = () => {
-    const text = inputValue.trim();
-    if (!text || isTyping) return;
-
+  const processMessage = (text) => {
     const userMsg = {
       id: Date.now().toString(),
       text,
@@ -66,18 +65,33 @@ const ChatBot = () => {
     setMessages((prev) => [...prev, userMsg]);
     setInputValue("");
     setIsTyping(true);
+    setShowSuggestions(false);
 
-    // Placeholder bot response
+    // Randomized delay for natural feel (600–1200ms)
+    const delay = 600 + Math.random() * 600;
+
     setTimeout(() => {
+      const responseText = generateResponse(text);
       const botMsg = {
         id: (Date.now() + 1).toString(),
-        text: "Thanks for your message! I'm still learning — AI responses coming soon. 🚀",
+        text: responseText,
         sender: "bot",
         timestamp: new Date(),
       };
       setMessages((prev) => [...prev, botMsg]);
       setIsTyping(false);
-    }, 1500);
+    }, delay);
+  };
+
+  const handleSend = () => {
+    const text = inputValue.trim();
+    if (!text || isTyping) return;
+    processMessage(text);
+  };
+
+  const handleSuggestionClick = (suggestion) => {
+    if (isTyping) return;
+    processMessage(suggestion);
   };
 
   const handleKeyDown = (e) => {
@@ -119,6 +133,8 @@ const ChatBot = () => {
       transition: { type: "spring", stiffness: 400, damping: 30 },
     },
   };
+
+  const suggestions = getSuggestions();
 
   return (
     <>
@@ -171,6 +187,26 @@ const ChatBot = () => {
                   </span>
                 </motion.div>
               ))}
+
+              {/* Suggestion Chips */}
+              {showSuggestions && messages.length > 0 && !isTyping && (
+                <motion.div
+                  className="chatbot-suggestions"
+                  variants={msgVariants}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  {suggestions.map((s, i) => (
+                    <button
+                      key={i}
+                      className="chatbot-suggestions__chip"
+                      onClick={() => handleSuggestionClick(s)}
+                    >
+                      {s}
+                    </button>
+                  ))}
+                </motion.div>
+              )}
 
               {isTyping && (
                 <div className="chatbot-typing">
