@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Experience.css";
 import { BsPatchCheckFill } from "react-icons/bs";
+import LoadingState from "../LoadingState/LoadingState";
+import ErrorState from "../ErrorState/ErrorState";
 
 // const skills = [
 //   { category: "Frontend Development", skills: [
@@ -45,8 +47,8 @@ const Experience = () => {
     fetchSkills();
   }, []);
 
-  if (loading) return <section id="experience"><p>Loading...</p></section>;
-  if (error) return <section id="experience"><p>Error: {error}</p></section>;
+  if (loading) return <section id="experience"><LoadingState message="Loading skills" /></section>;
+  if (error) return <section id="experience"><ErrorState message={error} onRetry={() => window.location.reload()} /></section>;
 
   return (
     <section id="experience">

@@ -1,11 +1,13 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "../canvas/Earth";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../../utils/motion";
+
+// Get your free access key at https://web3forms.com
+const WEB3FORMS_ACCESS_KEY = "701df924-3983-496c-a7ee-1a2cebc2d548";
 
 const Contact = () => {
   const formRef = useRef();
@@ -27,41 +29,37 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `Portfolio Contact from ${form.name}`,
           from_name: form.name,
-          to_name: "JavaScript Mastery",
-          from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          email: form.email,
           message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+        }),
+      });
 
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
+      const data = await response.json();
 
-          alert("Ahh, something went wrong. Please try again.");
-        }
-      );
+      if (data.success) {
+        alert("Thank you! I will get back to you as soon as possible.");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        throw new Error(data.message || "Something went wrong");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Ahh, something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
