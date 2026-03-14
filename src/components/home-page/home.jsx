@@ -6,6 +6,7 @@ import Experience from "./../Experience/Experience.jsx";
 import Services from "./../services/services.jsx";
 import Professional from "./../professional/professional.jsx";
 import Portfolio from "./../portfolio/portfolio.jsx";
+import CodingStats from "./../CodingStats/CodingStats.jsx";
 import Testimonial from "./../testimonial/testimonial.jsx";
 // import Contact from "./../Contact/Contact.jsx";
 import Footer from "./../footer/footer.jsx";
@@ -22,6 +23,7 @@ const Home = () => {
       <Experience />
       <Services />
       <Portfolio />
+      <CodingStats />
       <Testimonial />
       <div className='relative z-0'>
           <Contact />
