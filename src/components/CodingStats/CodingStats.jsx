@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../utils/motion";
 import "./CodingStats.css";
@@ -12,7 +11,6 @@ const TITLE_COLOR = "4db5ff";
 const TEXT_COLOR = "aaa6c3";
 const ICON_COLOR = "4db5ff";
 const BORDER_COLOR = "2c2c6c";
-const RING_COLOR = "4db5ff";
 
 const CodingStats = () => {
   return (

@@ -19,8 +19,19 @@ const ChatBot = () => {
   const [inputValue, setInputValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(true);
+  const [showTooltip, setShowTooltip] = useState(false);
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
+
+  // Show tooltip after 2s, auto-dismiss after 5s
+  useEffect(() => {
+    const showTimer = setTimeout(() => setShowTooltip(true), 2000);
+    const hideTimer = setTimeout(() => setShowTooltip(false), 7000);
+    return () => {
+      clearTimeout(showTimer);
+      clearTimeout(hideTimer);
+    };
+  }, []);
 
   // Send welcome message on first open
   useEffect(() => {
@@ -243,10 +254,33 @@ const ChatBot = () => {
         )}
       </AnimatePresence>
 
+      {/* Tooltip */}
+      <AnimatePresence>
+        {showTooltip && !isOpen && (
+          <motion.div
+            className="chatbot-tooltip"
+            initial={{ opacity: 0, x: 10, scale: 0.9 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            exit={{ opacity: 0, x: 10, scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 300, damping: 25 }}
+            onClick={() => {
+              setShowTooltip(false);
+              setIsOpen(true);
+            }}
+          >
+            Hey! Ask me anything about Nadeem 👋
+            <span className="chatbot-tooltip__arrow" />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* FAB */}
       <button
         className={`chatbot-fab ${isOpen ? "chatbot-fab--active" : ""}`}
-        onClick={() => setIsOpen((prev) => !prev)}
+        onClick={() => {
+          setIsOpen((prev) => !prev);
+          setShowTooltip(false);
+        }}
         aria-label="Toggle chat"
       >
         {isOpen ? <IoClose /> : <BsChatDotsFill />}
