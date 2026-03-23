@@ -3,10 +3,13 @@ import Home from './components/home-page/home.jsx'
 import MoreProjects from "./components/moreProjects/moreProjects.jsx";
 import NotFound from "./components/NotFound/NotFound";
 import ChatBot from "./components/ChatBot/ChatBot";
+import useVisitorTracking from "./hooks/useVisitorTracking";
 
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 
 const App = () => {
+  useVisitorTracking();
+
   return (
     <>
       <BrowserRouter>
@@ -22,3 +25,4 @@ const App = () => {
 };
 
 export default App;
+
