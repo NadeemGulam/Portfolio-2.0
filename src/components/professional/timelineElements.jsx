@@ -1,10 +1,10 @@
 let timelineElements = [
   {
     id: 0,
-    title: "ANZ | Software Engineer",
+    title: "ANZ | Software Developer | Node.js, React, AWS, Kubernetes, Code fresh CI/CD, Fastify, MQ",
     location: "Bangalore",
     description:
-      "• Currently working on Mediation Tool using Nodejs, AWS, GCP and Kubernates.",
+      "• Developed and contributed to a microservices-based mediation platform with multi-cloud support (AWS, GCP) and on-prem environments, supporting 1000+ services, delivering high scalability, reliability, and optimized performance across distributed systems. • Integrated MQ support by developing a Java-based adapter, enhancing message handling and reliability within the mediation layer. • Created an NPM package mu2-tokenisation leveraging ANZ’s Advanced Data Protection (ADP) for secure PII tokenization and masking. • Developed a self-service onboarding dashboard (React + Node.js) that auto-generates service templates, triggers, and certificates — reducing onboarding time to under 12 minutes. • Implemented cost optimization strategies, cutting cloud expenditure by up to 80%, and conducted system performance testing to validate scalability. • Enabled one-click deployment and decommissioning through Codefresh CI/CD pipelines, improving operational efficiency, reducing cloud costs, and accelerating release speed. • Automated certificate lifecycle management with a CI/CD-integrated ServiceNow pipeline, ensuring compliance and uptime. • Integrated security and quality tools including Checkmarx, BlackDuck, Twistlock, and SonarQube, ensuring a secure and vulnerability-free platform. • Built an intuitive API Management Application UI using Angular, enabling seamless discovery and management of internal APIs across the organization. • Currently contributing to MQ service enhancements and OS patching automation, focusing on reliability and system performance optimization.",
     buttonText: "View Frontend Projects",
     date: "Oct 2024 - Present",
     icon: "work",
